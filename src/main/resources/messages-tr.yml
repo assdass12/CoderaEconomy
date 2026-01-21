@@ -1,0 +1,128 @@
+# ╔═══════════════════════════════════════════════════════════╗
+# ║            CoderaEconomy v2.5 - Turkish Messages         ║
+# ╚═══════════════════════════════════════════════════════════╝
+
+prefix: "<#E67E22>CoderaEconomy <#FFFACD>» "
+
+# ═══════════════════ GENEL MESAJLAR ═══════════════════
+
+no-permission: "<#FF4444>Bu komutu kullanmak için yetkiniz yok!"
+player-not-found: "<#FF4444>Oyuncu bulunamadı!"
+invalid-amount: "<#FF4444>Geçersiz miktar! Lütfen pozitif bir sayı girin."
+console-not-allowed: "<#FF4444>Bu komutu sadece oyuncular kullanabilir!"
+config-reloaded: "<#FFFACD>Konfigürasyon başarıyla yenilendi!"
+
+# ═══════════════════ BAKİYE MESAJLARI ═══════════════════
+
+balance:
+  self: "<#FFFACD>Bakiyeniz: <#FFD700>%amount% <#FFFACD>(%currency%)"
+  other: "<#FFD700>%player% <#FFFACD>bakiyesi: <#FFD700>%amount% <#FFFACD>(%currency%)"
+
+# ═══════════════════ ÖDEME MESAJLARI ═══════════════════
+
+pay:
+  disabled-currency: "<#FF4444>%currency% para birimi için para gönderme devre dışı!"
+  self-pay: "<#FF4444>Kendinize para gönderemezsiniz!"
+  insufficient-funds: "<#FF4444>Yetersiz bakiye! Gerekli: <#FFD700>%amount%"
+  min-amount: "<#FF4444>En az <#FFD700>%amount% <#FF4444>gönderebilirsiniz!"
+  max-amount: "<#FF4444>En fazla <#FFD700>%amount% <#FF4444>gönderebilirsiniz!"
+  error: "<#FF4444>İşlem sırasında bir hata oluştu!"
+  no-pending: "<#FF4444>Onay bekleyen bir ödemeniz yok!"
+  expired: "<#FF4444>Ödeme onayı süresi doldu!"
+
+  confirmation:
+    header: "\n<#E67E22>╔══════════════════════════════════╗\n<#FFD700>       Ödeme Onayı Gerekli\n<#E67E22>╠══════════════════════════════════╣"
+    amount: "<#E67E22>║ <#FFFACD>Alıcı: <#FFD700>%player%\n<#E67E22>║ <#FFFACD>Miktar: <#FFD700>%amount%\n<#E67E22>║ <#FFFACD>Para Birimi: <#FFD700>%currency%"
+    tax: "<#E67E22>║ <#FF6B6B>Vergi: <#FFD700>%tax%\n<#E67E22>║ <#FFFACD>Toplam: <#FFD700>%total%"
+    confirm: "<#E67E22>╠══════════════════════════════════╣\n<#E67E22>║ <#FFFACD>Onaylamak için: <#FFD700>/payconfirm"
+    timeout: "<#E67E22>║ <#FF6B6B>60 saniye içinde onaylamalısınız\n<#E67E22>╚══════════════════════════════════╝"
+
+  success-sender: "<#FFFACD><#FFD700>%player% <#FFFACD>oyuncusuna <#FFD700>%amount% <#FFFACD>(%currency%) gönderdiniz."
+  success-receiver: "<#FFFACD><#FFD700>%player% <#FFFACD>oyuncusu size <#FFD700>%amount% <#FFFACD>(%currency%) gönderdi."
+  tax-applied: "<#FFFACD>Vergi kesintisi: <#FFD700>%tax%"
+
+# ═══════════════════ ADMİN KOMUTLARI ═══════════════════
+
+admin:
+  insufficient: "<#FF4444>Bu oyuncuda yeterli bakiye yok!"
+  invalid-balance: "<#FF4444>Bakiye geçerli aralıkta olmalı!"
+  error: "<#FF4444>İşlem sırasında bir hata oluştu!"
+
+  give:
+    success: "<#FFFACD><#FFD700>%player% <#FFFACD>oyuncusuna <#FFD700>%amount% <#FFFACD>(%currency%) verildi."
+    notify: "<#FFFACD><#FFD700>%sender% <#FFFACD>tarafından size <#FFD700>%amount% <#FFFACD>(%currency%) verildi."
+
+  set:
+    success: "<#FFFACD><#FFD700>%player% <#FFFACD>bakiyesi <#FFD700>%amount% <#FFFACD>(%currency%) olarak ayarlandı."
+    notify: "<#FFFACD>Bakiyeniz <#FFD700>%sender% <#FFFACD>tarafından <#FFD700>%amount% <#FFFACD>(%currency%) olarak ayarlandı."
+
+  remove:
+    success: "<#FFFACD><#FFD700>%player% <#FFFACD>oyuncusundan <#FFD700>%amount% <#FFFACD>(%currency%) alındı."
+    notify: "<#FFFACD>Hesabınızdan <#FFD700>%sender% <#FFFACD>tarafından <#FFD700>%amount% <#FFFACD>(%currency%) alındı."
+
+  reset:
+    success: "<#FFFACD><#FFD700>%player% <#FFFACD>bakiyesi (%currency%) sıfırlandı."
+    notify: "<#FFFACD>Bakiyeniz (%currency%) <#FFD700>%sender% <#FFFACD>tarafından sıfırlandı."
+
+  bulk:
+    processing: "<#FFFACD>Toplu işlem başlatıldı, lütfen bekleyin..."
+    give-complete: "<#FFFACD>Toplu para verme tamamlandı!\n<#FFD700>Başarılı: %success% <#FFFACD>| <#FF4444>Başarısız: %fail%\n<#FFFACD>Miktar: <#FFD700>%amount% <#FFFACD>(%currency%)"
+    set-complete: "<#FFFACD>Toplu bakiye ayarlama tamamlandı!\n<#FFD700>Başarılı: %success% <#FFFACD>| <#FF4444>Başarısız: %fail%\n<#FFFACD>Yeni bakiye: <#FFD700>%amount% <#FFFACD>(%currency%)"
+    remove-complete: "<#FFFACD>Toplu para alma tamamlandı!\n<#FFD700>Başarılı: %success% <#FFFACD>| <#FF4444>Başarısız: %fail%\n<#FFFACD>Miktar: <#FFD700>%amount% <#FFFACD>(%currency%)"
+    reset-complete: "<#FFFACD>Toplu bakiye sıfırlama tamamlandı!\n<#FFD700>Başarılı: %success% <#FFFACD>| <#FF4444>Başarısız: %fail%\n<#FFFACD>Para birimi: <#FFD700>%currency%"
+
+  usage:
+    give: "<#E67E22>Kullanım: <#FFFACD>/eco give <#FFD700><oyuncu|all> <miktar> [para birimi]"
+    set: "<#E67E22>Kullanım: <#FFFACD>/eco set <#FFD700><oyuncu|all> <miktar> [para birimi]"
+    remove: "<#E67E22>Kullanım: <#FFFACD>/eco remove <#FFD700><oyuncu|all> <miktar> [para birimi]"
+    reset: "<#E67E22>Kullanım: <#FFFACD>/eco reset <#FFD700><oyuncu|all> [para birimi]"
+
+# ═══════════════════ BALTOP MESAJLARI ═══════════════════
+
+baltop:
+  disabled: "<#FF4444>Baltop sistemi şu anda devre dışı!"
+  header: "\n      <#E67E22>★ <#FFD700>En Zengin Oyuncular <#E67E22>★\n      <#FFFACD>Sayfa: <#FFD700>%page%<#FFFACD>/<#FFD700>%total%\n "
+  entry: "      <#E67E22>%position%. <#FFFACD>%player% <#E67E22>» <#FFD700>%amount%"
+  footer: " "
+  no-data: "          <#FF4444>Henüz veri yok!"
+  invalid-page: "      <#FF4444>Geçersiz sayfa numarası!"
+
+# ═══════════════════ PARA BİRİMİ MESAJLARI ═══════════════════
+
+currency:
+  not-found: "<#FF4444>Para birimi bulunamadı: <#FFD700>%currency%"
+
+  list:
+    header: "\n<#E67E22>╔══════════════════════════════════╗\n<#FFD700>       Mevcut Para Birimleri\n<#E67E22>╠══════════════════════════════════╣"
+    entry: "<#E67E22>║ <#FFD700>%id% <#FFFACD>- %name% %symbol% %default%"
+    footer: "<#E67E22>╚══════════════════════════════════╝\n<#FFFACD>Detaylar için: <#FFD700>/currency info <id>"
+
+  info:
+    usage: "<#FFD700>Kullanım: /currency info <para birimi>"
+    header: "\n<#E67E22>╔══════════════════════════════════╗\n<#FFD700>       %name% Bilgileri\n<#E67E22>╠══════════════════════════════════╣"
+    id: "<#E67E22>║ <#FFFACD>ID: <#FFD700>%id%"
+    name: "<#E67E22>║ <#FFFACD>İsim: <#FFD700>%name%"
+    symbol: "<#E67E22>║ <#FFFACD>Sembol: <#FFD700>%symbol%"
+    format: "<#E67E22>║ <#FFFACD>Format: <#FFD700>%format%"
+    starter: "<#E67E22>║ <#FFFACD>Başlangıç: <#FFD700>%starter%"
+    limits: "<#E67E22>║ <#FFFACD>Limitler: <#FFD700>%min% - %max%"
+    pay: "<#E67E22>║ <#FFFACD>Transfer: <#FFD700>%pay-enabled%"
+    default: "<#E67E22>║ <#FFFACD>Varsayılan: <#FFD700>%default%\n<#E67E22>╚══════════════════════════════════╝"
+
+# ═══════════════════ YARDIM MESAJLARI ═══════════════════
+
+help:
+  header: "\n      <#E67E22>★ <#FFD700>&lCoderaEconomy Yardım <#E67E22>★\n "
+
+  player:
+    0: "  <#E67E22>/balance <#E67E22>» <#FFFACD>Güncel bakiyenizi görüntüler"
+    1: "  <#E67E22>/baltop <#E67E22>» <#FFFACD>En zengin oyuncuları listeler"
+    2: "  <#E67E22>/pay <#E67E22>» <#FFFACD>Oyuncuya para gönderir"
+    3: "  <#E67E22>/currency <#E67E22>» <#FFFACD>Para birimlerini listeler"
+
+  admin:
+    0: "  <#FFD700>/eco give <player|all> <#E67E22>» <#FFFACD>Para verir"
+    1: "  <#FFD700>/eco set <player|all> <#E67E22>» <#FFFACD>Bakiye ayarlar"
+    2: "  <#FFD700>/eco remove <player|all> <#E67E22>» <#FFFACD>Para çeker"
+    3: "  <#FFD700>/eco reset <player|all> <#E67E22>» <#FFFACD>Bakiyeyi sıfırlar"
+    4: "  <#FFD700>/eco reload <#E67E22>» <#FFFACD>Eklentiyi yeniler"

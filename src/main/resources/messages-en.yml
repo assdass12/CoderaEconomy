@@ -1,0 +1,129 @@
+# ╔═══════════════════════════════════════════════════════════╗
+# ║            CoderaEconomy v2.5 - English Messages         ║
+# ╚═══════════════════════════════════════════════════════════╝
+
+prefix: "<#E67E22>CoderaEconomy <#FFFACD>» "
+
+# ═══════════════════ GENERAL MESSAGES ═══════════════════
+
+no-permission: "<#FF4444>You don't have permission to use this command!"
+player-not-found: "<#FF4444>Player not found!"
+invalid-amount: "<#FF4444>Invalid amount! Please enter a positive number."
+console-not-allowed: "<#FF4444>Only players can use this command!"
+config-reloaded: "<#FFFACD>Configuration reloaded successfully!"
+
+# ═══════════════════ BALANCE MESSAGES ═══════════════════
+
+balance:
+  self: "<#FFFACD>Your balance: <#FFD700>%amount% <#FFFACD>(%currency%)"
+  other: "<#FFD700>%player%<#FFFACD>'s balance: <#FFD700>%amount% <#FFFACD>(%currency%)"
+
+# ═══════════════════ PAY MESSAGES ═══════════════════
+
+pay:
+  disabled-currency: "<#FF4444>Money transfer is disabled for %currency%!"
+  self-pay: "<#FF4444>You cannot pay yourself!"
+  insufficient-funds: "<#FF4444>Insufficient funds! Required: <#FFD700>%amount%"
+  min-amount: "<#FF4444>Minimum amount is <#FFD700>%amount%<#FF4444>!"
+  max-amount: "<#FF4444>Maximum amount is <#FFD700>%amount%<#FF4444>!"
+  error: "<#FF4444>An error occurred during the transaction!"
+  no-pending: "<#FF4444>You don't have any pending payments!"
+  expired: "<#FF4444>Payment confirmation expired!"
+
+  confirmation:
+    header: "\n<#E67E22>╔══════════════════════════════════╗\n<#FFD700>     Payment Confirmation Required\n<#E67E22>╠══════════════════════════════════╣"
+    amount: "<#E67E22>║ <#FFFACD>Recipient: <#FFD700>%player%\n<#E67E22>║ <#FFFACD>Amount: <#FFD700>%amount%\n<#E67E22>║ <#FFFACD>Currency: <#FFD700>%currency%"
+    tax: "<#E67E22>║ <#FF6B6B>Tax: <#FFD700>%tax%\n<#E67E22>║ <#FFFACD>Total: <#FFD700>%total%"
+    confirm: "<#E67E22>╠══════════════════════════════════╣\n<#E67E22>║ <#FFFACD>To confirm: <#FFD700>/payconfirm"
+    timeout: "<#E67E22>║ <#FF6B6B>You have 60 seconds to confirm\n<#E67E22>╚══════════════════════════════════╝"
+
+  success-sender: "<#FFFACD>You sent <#FFD700>%amount% <#FFFACD>(%currency%) to <#FFD700>%player%<#FFFACD>."
+  success-receiver: "<#FFFACD>You received <#FFD700>%amount% <#FFFACD>(%currency%) from <#FFD700>%player%<#FFFACD>."
+  tax-applied: "<#FFFACD>Tax deducted: <#FFD700>%tax%"
+
+# ═══════════════════ ADMIN COMMANDS ═══════════════════
+
+admin:
+  insufficient: "<#FF4444>This player doesn't have enough balance!"
+  invalid-balance: "<#FF4444>Balance must be within valid range!"
+  error: "<#FF4444>An error occurred during the operation!"
+
+  give:
+    success: "<#FFFACD>Gave <#FFD700>%amount% <#FFFACD>(%currency%) to <#FFD700>%player%<#FFFACD>."
+    notify: "<#FFFACD>You received <#FFD700>%amount% <#FFFACD>(%currency%) from <#FFD700>%sender%<#FFFACD>."
+
+  set:
+    success: "<#FFFACD>Set <#FFD700>%player%<#FFFACD>'s balance to <#FFD700>%amount% <#FFFACD>(%currency%)."
+    notify: "<#FFFACD>Your balance was set to <#FFD700>%amount% <#FFFACD>(%currency%) by <#FFD700>%sender%<#FFFACD>."
+
+  remove:
+    success: "<#FFFACD>Removed <#FFD700>%amount% <#FFFACD>(%currency%) from <#FFD700>%player%<#FFFACD>."
+    notify: "<#FFFACD><#FFD700>%amount% <#FFFACD>(%currency%) was removed from your account by <#FFD700>%sender%<#FFFACD>."
+
+  reset:
+    success: "<#FFFACD>Reset <#FFD700>%player%<#FFFACD>'s balance (%currency%)."
+    notify: "<#FFFACD>Your balance (%currency%) was reset by <#FFD700>%sender%<#FFFACD>."
+
+  bulk:
+    processing: "<#FFFACD>Bulk operation started, please wait..."
+    give-complete: "<#FFFACD>Bulk money giving completed!\n<#FFD700>Success: %success% <#FFFACD>| <#FF4444>Failed: %fail%\n<#FFFACD>Amount: <#FFD700>%amount% <#FFFACD>(%currency%)"
+    set-complete: "<#FFFACD>Bulk balance setting completed!\n<#FFD700>Success: %success% <#FFFACD>| <#FF4444>Failed: %fail%\n<#FFFACD>New balance: <#FFD700>%amount% <#FFFACD>(%currency%)"
+    remove-complete: "<#FFFACD>Bulk money removal completed!\n<#FFD700>Success: %success% <#FFFACD>| <#FF4444>Failed: %fail%\n<#FFFACD>Amount: <#FFD700>%amount% <#FFFACD>(%currency%)"
+    reset-complete: "<#FFFACD>Bulk balance reset completed!\n<#FFD700>Success: %success% <#FFFACD>| <#FF4444>Failed: %fail%\n<#FFFACD>Currency: <#FFD700>%currency%"
+
+  usage:
+    give: "<#E67E22>Usage: <#FFFACD>/eco give <#FFD700><player|all> <amount> [currency]"
+    set: "<#E67E22>Usage: <#FFFACD>/eco set <#FFD700><player|all> <amount> [currency]"
+    remove: "<#E67E22>Usage: <#FFFACD>/eco remove <#FFD700><player|all> <amount> [currency]"
+    reset: "<#E67E22>Usage: <#FFFACD>/eco reset <#FFD700><player|all> [currency]"
+
+# ═══════════════════ BALTOP MESSAGES ═══════════════════
+
+baltop:
+  disabled: "<#FF4444>Baltop system is currently disabled!"
+  header: "\n      <#E67E22>★ <#FFD700>Top Richest Players <#E67E22>★\n      <#FFFACD>Page: <#FFD700>%page%<#FFFACD>/<#FFD700>%total%\n "
+  entry: "      <#E67E22>%position%. <#FFFACD>%player% <#E67E22>» <#FFD700>%amount%"
+  footer: " "
+  no-data: "          <#FF4444>No data available yet!"
+  invalid-page: "      <#FF4444>Invalid page number!"
+
+# ═══════════════════ CURRENCY MESSAGES ═══════════════════
+
+currency:
+  not-found: "<#FF4444>Currency not found: <#FFD700>%currency%"
+
+  list:
+    header: "\n<#E67E22>╔══════════════════════════════════╗\n<#FFD700>      Available Currencies\n<#E67E22>╠══════════════════════════════════╣"
+    entry: "<#E67E22>║ <#FFD700>%id% <#FFFACD>- %name% %symbol% %default%"
+    footer: "<#E67E22>╚══════════════════════════════════╝\n<#FFFACD>For details: <#FFD700>/currency info <id>"
+
+  info:
+    usage: "<#FFD700>Usage: /currency info <currency>"
+    header: "\n<#E67E22>╔══════════════════════════════════╗\n<#FFD700>       %name% Information\n<#E67E22>╠══════════════════════════════════╣"
+    id: "<#E67E22>║ <#FFFACD>ID: <#FFD700>%id%"
+    name: "<#E67E22>║ <#FFFACD>Name: <#FFD700>%name%"
+    symbol: "<#E67E22>║ <#FFFACD>Symbol: <#FFD700>%symbol%"
+    format: "<#E67E22>║ <#FFFACD>Format: <#FFD700>%format%"
+    starter: "<#E67E22>║ <#FFFACD>Starter Balance: <#FFD700>%starter%"
+    limits: "<#E67E22>║ <#FFFACD>Limits: <#FFD700>%min% - %max%"
+    pay: "<#E67E22>║ <#FFFACD>Transfer: <#FFD700>%pay-enabled%"
+    default: "<#E67E22>║ <#FFFACD>Default: <#FFD700>%default%\n<#E67E22>╚══════════════════════════════════╝"
+
+# ═══════════════════ HELP MESSAGES ═══════════════════
+
+help:
+  header: "\n      <#E67E22>★ <#FFD700>&lCoderaEconomy Help <#E67E22>★\n "
+
+  player:
+    0: "  <#E67E22>/balance <#E67E22>» <#FFFACD>Check your balance"
+    1: "  <#E67E22>/baltop <#E67E22>» <#FFFACD>View richest players"
+    2: "  <#E67E22>/pay <#E67E22>» <#FFFACD>Send money to player"
+    3: "  <#E67E22>/currency <#E67E22>» <#FFFACD>List currencies"
+
+  admin:
+    0: "  <#FFD700>/eco give <player|all> <#E67E22>» <#FFFACD>Give money"
+    1: "  <#FFD700>/eco set <player|all> <#E67E22>» <#FFFACD>Set balance"
+    2: "  <#FFD700>/eco remove <player|all> <#E67E22>» <#FFFACD>Remove money"
+    3: "  <#FFD700>/eco reset <player|all> <#E67E22>» <#FFFACD>Reset balance"
+    4: "  <#FFD700>/eco reload <#E67E22>» <#FFFACD>Reload plugin"
+    5: "  <#FFFACD>Use <#FFD700>all <#FFFACD>parameter for bulk operations"

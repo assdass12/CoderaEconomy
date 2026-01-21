@@ -1,0 +1,107 @@
+# ╔═══════════════════════════════════════════════════════════╗
+# ║          CoderaEconomy v2.5 - Main Configuration         ║
+# ║         Multi-Currency Modern Economy System              ║
+# ╚═══════════════════════════════════════════════════════════╝
+
+# Language Settings (tr or en)
+# Dil Ayarları (tr veya en)
+language: tr
+
+# ═══════════════════════════════════════════════════════════
+#                    CURRENCY SETTINGS
+# ═══════════════════════════════════════════════════════════
+
+# Define your currencies here
+# Multiple currencies are supported!
+currencies:
+  # Turkish Lira (Default Currency)
+  lira:
+    default: true #Default currency?
+    display-name: "Lira"
+    symbol: "₺"
+    name-singular: "Lira"
+    name-plural: "Lira"
+    format: "%amount% %symbol%"
+    decimal-places: 2
+    starter-balance: 100.0
+    min-balance: 0.0
+    max-balance: -1  # -1 for unlimited
+    pay:
+      enabled: true
+      min-amount: 1.0
+      max-amount: -1  # -1 for unlimited
+      tax-percentage: 0.0  # 0.05 = 5% tax
+
+  # US Dollar
+  dollar:
+    default: false
+    display-name: "Dollar"
+    symbol: "$"
+    name-singular: "Dollar"
+    name-plural: "Dollars"
+    format: "%symbol%%amount%"
+    decimal-places: 2
+    starter-balance: 50.0
+    min-balance: 0.0
+    max-balance: -1
+    pay:
+      enabled: true
+      min-amount: 1.0
+      max-amount: -1
+      tax-percentage: 0.0
+
+  # Gold Coins
+  gold:
+    default: false
+    display-name: "Gold"
+    symbol: "⚜"
+    name-singular: "Gold Coin"
+    name-plural: "Gold Coins"
+    format: "%amount% %symbol%"
+    decimal-places: 0
+    starter-balance: 10.0
+    min-balance: 0.0
+    max-balance: 999999
+    pay:
+      enabled: true
+      min-amount: 1.0
+      max-amount: 1000
+      tax-percentage: 0.1  # 10% tax
+
+  # Gems/Crystals (Premium Currency Example)
+  gem:
+    default: false
+    display-name: "Gem"
+    symbol: "💎"
+    name-singular: "Gem"
+    name-plural: "Gems"
+    format: "%amount% %symbol%"
+    decimal-places: 0
+    starter-balance: 0.0
+    min-balance: 0.0
+    max-balance: 99999
+    pay:
+      enabled: false  # Premium currency cannot be transferred
+      min-amount: 1.0
+      max-amount: -1
+      tax-percentage: 0.0
+
+# ═══════════════════════════════════════════════════════════
+#                    BALTOP SETTINGS
+# ═══════════════════════════════════════════════════════════
+
+baltop:
+  enabled: true
+  entries-per-page: 10
+  update-interval: 300  # seconds
+
+# ═══════════════════════════════════════════════════════════
+#                    DATABASE SETTINGS
+# ═══════════════════════════════════════════════════════════
+
+database:
+  type: "SQLITE"  # Currently only SQLITE is supported
+  backup:
+    enabled: true
+    interval: 3600  # seconds (1 hour)
+    keep-backups: 5

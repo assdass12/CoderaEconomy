@@ -1,0 +1,108 @@
+name: CoderaEconomy
+version: '2.5.1'
+main: tr.balzach.coderaEconomy.CoderaEconomy
+api-version: '1.21'
+load: STARTUP
+author: Balzach
+description: Modern multi-currency economy system with hex support, pay confirmation, and bulk operations
+website: https://github.com/Balzach/CoderaEconomy
+depend: [Vault]
+softdepend: [PlaceholderAPI]
+
+commands:
+  economy:
+    description: Main economy command with bulk operations support and currency management
+    usage: /<command> [help|reload|give|set|remove|reset|currency] <player|all> [amount] [currency]
+    aliases: [eco, ekonomi, ce]
+
+  balance:
+    description: Check your balance
+    usage: /<command> [player] [currency]
+    aliases: [bal, money, para, bakiye]
+
+  balancetop:
+    description: View richest players
+    usage: /<command> [page] [currency]
+    aliases: [baltop, zenginler]
+
+  pay:
+    description: Send money to another player (requires confirmation)
+    usage: /<command> <player> <amount> [currency]
+    aliases: [odeme, gonder]
+
+  payconfirm:
+    description: Confirm pending payment
+    usage: /<command>
+    aliases: [odemenonayla, confirmPay]
+
+  currency:
+    description: View available currencies (can also use /ce currency)
+    usage: /<command> [list|info] [currency]
+    aliases: [currencies, parabirimi]
+
+permissions:
+  coderaeconomy.*:
+    description: All CoderaEconomy permissions
+    default: op
+    children:
+      coderaeconomy.balance: true
+      coderaeconomy.balance.others: true
+      coderaeconomy.balancetop: true
+      coderaeconomy.pay: true
+      coderaeconomy.currency: true
+      coderaeconomy.admin: true
+
+  coderaeconomy.balance:
+    description: Check own balance
+    default: true
+
+  coderaeconomy.balance.others:
+    description: Check others balance
+    default: op
+
+  coderaeconomy.balancetop:
+    description: View baltop
+    default: true
+
+  coderaeconomy.pay:
+    description: Send money to players
+    default: true
+
+  coderaeconomy.currency:
+    description: View currencies
+    default: true
+
+  coderaeconomy.admin:
+    description: Admin commands (includes bulk operations)
+    default: op
+    children:
+      coderaeconomy.admin.give: true
+      coderaeconomy.admin.set: true
+      coderaeconomy.admin.remove: true
+      coderaeconomy.admin.reset: true
+      coderaeconomy.admin.reload: true
+      coderaeconomy.admin.bulk: true
+
+  coderaeconomy.admin.give:
+    description: Give money to players
+    default: op
+
+  coderaeconomy.admin.set:
+    description: Set player balance
+    default: op
+
+  coderaeconomy.admin.remove:
+    description: Remove money from players
+    default: op
+
+  coderaeconomy.admin.reset:
+    description: Reset player balance
+    default: op
+
+  coderaeconomy.admin.reload:
+    description: Reload configuration
+    default: op
+
+  coderaeconomy.admin.bulk:
+    description: Use bulk operations (all parameter)
+    default: op
